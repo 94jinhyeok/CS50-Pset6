@@ -1,5 +1,5 @@
 from sys import argv, exit
-from helpers import user_input_is_valid, rotate_character, encrypt
+from helpers import user_input_is_valid, encrypt
 
 def main():
 
@@ -14,7 +14,6 @@ def main():
     scrambled = encrypt(message, key)
 
     print(scrambled)
-
 
 if __name__ == '__main__':
     main()
