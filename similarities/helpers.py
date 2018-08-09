@@ -1,7 +1,16 @@
 def lines(a, b):
     """Return lines in both a and b"""
 
-    # TODO
+    indenticalLines = []
+    lineA = []
+    lineB = []
+
+    index = 0
+
+    while(a[index] != "\n"):
+        print(a[index])
+        index+= 1
+
     return []
 
 
