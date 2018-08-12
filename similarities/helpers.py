@@ -1,15 +1,26 @@
 def lines(a, b):
     """Return lines in both a and b"""
 
-    indenticalLines = []
-    lineA = []
-    lineB = []
+    # while(a[index] != "\n"):
+    #     print(a[index])
+    #     index+= 1
 
-    index = 0
+    # for char in a:
+    #     if (char != "\n"):
+    #         lineA.append(char)
+    #     else:
+    #         break
 
-    while(a[index] != "\n"):
-        print(a[index])
-        index+= 1
+    # print(lineA)
+
+    # refactor lines 17, 18 into a function
+    linesA = a.split('\n')
+    linesB = b.split('\n')
+
+    print(linesA)
+    print(linesB)
+
+
 
     return []
 
