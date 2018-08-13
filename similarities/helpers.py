@@ -1,26 +1,25 @@
+from nltk.tokenize import sent_tokenize
+
+def indenticalItems(listA, listB):
+
+    indenticalItems = []
+
+    for item in listA:
+        if (item in listB and item not in indenticalItems):
+            indenticalItems.append(item)
+
+    return indenticalItems
+
 def lines(a, b):
     """Return lines in both a and b"""
 
-    linesA = a.split('\n')
-    linesB = b.split('\n')
-    indenticalLines = []
-
-    for line in linesA:
-        if (line in linesB and line not in indenticalLines):
-            indenticalLines.append(line)
-
-    print(linesA)
-    print(linesB)
-    print(indenticalLines)
-
-    return []
+    return indenticalItems(a.split('\n'), b.split('\n'))
 
 
 def sentences(a, b):
     """Return sentences in both a and b"""
 
-    # TODO
-    return []
+    return indenticalItems(sent_tokenize(a), sent_tokenize(b))
 
 
 def substrings(a, b, n):
