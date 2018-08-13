@@ -13,15 +13,16 @@ def indenticalItems(listA, listB):
 def stringToListOfSubstrings(string, length):
 
     index = 0
-
+    newString = " ".join(string.splitlines())
     substrings = []
 
-    while (index < len(" ".join(string.splitlines()))):
-        if (index % length == 0):
-            substrings.append(" ".join(string.splitlines())[index:length+index:1])
+    while (index < len(newString)):
+        if (length <= len(newString[index:length+index])):
+            substrings.append(newString[index:length+index])
         index += 1
 
     print(substrings)
+    print('')
 
     return substrings
 
