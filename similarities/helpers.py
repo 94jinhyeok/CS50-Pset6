@@ -10,10 +10,25 @@ def indenticalItems(listA, listB):
 
     return indenticalItems
 
+def stringToListOfSubstrings(string, length):
+
+    index = 0
+
+    substrings = []
+
+    while (index < len(" ".join(string.splitlines()))):
+        if (index % length == 0):
+            substrings.append(" ".join(string.splitlines())[index:length+index:1])
+        index += 1
+
+    print(substrings)
+
+    return substrings
+
 def lines(a, b):
     """Return lines in both a and b"""
 
-    return indenticalItems(a.split('\n'), b.split('\n'))
+    return indenticalItems(a.splitlines(), b.splitlines())
 
 
 def sentences(a, b):
@@ -25,5 +40,7 @@ def sentences(a, b):
 def substrings(a, b, n):
     """Return substrings of length n in both a and b"""
 
-    # TODO
-    return []
+    substringsA = stringToListOfSubstrings(a, n)
+    substringsB = stringToListOfSubstrings(b, n)
+
+    return indenticalItems(substringsA, substringsB)
