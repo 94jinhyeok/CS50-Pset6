@@ -10,21 +10,21 @@ def indenticalItems(listA, listB):
 
     return indenticalItems
 
+
 def stringToListOfSubstrings(string, length):
 
     index = 0
-    newString = " ".join(string.splitlines())
+    # removes line breaks '\n' from a string and replaces it with spaces ' '
+    string = " ".join(string.splitlines())
     substrings = []
 
-    while (index < len(newString)):
-        if (length <= len(newString[index:length+index])):
-            substrings.append(newString[index:length+index])
+    while (index < len(string)):
+        if (length <= len(string[index:length+index])):
+            substrings.append(string[index:length+index])
         index += 1
 
-    print(substrings)
-    print('')
-
     return substrings
+
 
 def lines(a, b):
     """Return lines in both a and b"""
