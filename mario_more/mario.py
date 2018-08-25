@@ -3,10 +3,12 @@ import sys
 def main():
 
     while True:
-        height = int(input("Height: "))
+        height = input("Height: ")
 
-        if (height > 0 and height <= 23):
-            break
+        if height and not height.isalpha():
+            height = int(height)
+            if (height >= 0 and height <= 23):
+                break
 
     for i in range(height):
 
