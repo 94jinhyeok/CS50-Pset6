@@ -39,7 +39,7 @@ def main():
         print("Invalid")
 
     else:
-        cardArray = [cardLength]
+        cardArray = []
 
         for i in range(cardLength):
 
