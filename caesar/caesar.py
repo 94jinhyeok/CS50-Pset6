@@ -5,7 +5,7 @@ def main():
 
     if user_input_is_valid(argv) == False:
         print("usage: python3 caesar.py n")
-        exit()
+        exit(1)
 
     message = input("Type a message:\n")
 
@@ -13,7 +13,7 @@ def main():
 
     scrambled = encrypt(message, key)
 
-    print(scrambled)
+    print("ciphertext: " + scrambled)
 
 if __name__ == '__main__':
     main()
